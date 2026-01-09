@@ -88,21 +88,51 @@ export const ACHIEVEMENTS: Achievement[] = [
 ];
 
 export const TEAM_MEMBERS: TeamMember[] = [
+  // Faculty
   { id: 'f1', name: 'Dr. Jayalakshmi', role: 'Faculty Advisor', image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400' },
   { id: 'f2', name: 'Dr. Ying Yue', role: 'Faculty Advisor', image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=400' },
   { id: 'f3', name: 'Prof. John Doe', role: 'Faculty Advisor', image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=400' },
   
+  // ExCom
   { id: 'e1', name: 'Alice Johnson', role: 'Chairperson', image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=400' },
   { id: 'e2', name: 'Bob Wilson', role: 'Vice Chair', image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=400' },
   { id: 'e3', name: 'Charlie Brown', role: 'Secretary', image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=400' },
   { id: 'e4', name: 'Diana Prince', role: 'Treasurer', image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=400' },
 
+  // Web Developers
   { id: 'w1', name: 'Evan Wright', role: 'Web Lead', domain: 'Web Development', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400', isLead: true },
-  { id: 'w2', name: 'Fiona Green', role: 'Developer', domain: 'Web Development', image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=400' },
-  { id: 'w3', name: 'George Hall', role: 'Developer', domain: 'Web Development', image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=400' },
+  { id: 'w2', name: 'Fiona Green', role: 'Member', domain: 'Web Development', image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=400' },
+  { id: 'w3', name: 'George Hall', role: 'Member', domain: 'Web Development', image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=400' },
   
-  { id: 'a1', name: 'Hannah Lee', role: 'AI Lead', domain: 'AI/ML', image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=400', isLead: true },
-  { id: 'a2', name: 'Ian Scott', role: 'Researcher', domain: 'AI/ML', image: 'https://images.unsplash.com/photo-1552058544-f2b08422138a?auto=format&fit=crop&q=80&w=400' },
+  // Graphic Designers
+  { id: 'g1', name: 'Hannah Lee', role: 'Lead', domain: 'Graphic Design', image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=400', isLead: true },
+  { id: 'g2', name: 'Ian Scott', role: 'Co-Lead', domain: 'Graphic Design', image: 'https://images.unsplash.com/photo-1552058544-f2b08422138a?auto=format&fit=crop&q=80&w=400' },
+  { id: 'g3', name: 'Julia Roberts', role: 'Member', domain: 'Graphic Design', image: 'https://images.unsplash.com/photo-1554151228-14d9def656ec?auto=format&fit=crop&q=80&w=400' },
+
+  // Public Relations
+  { id: 'pr1', name: 'Kevin Durant', role: 'Lead', domain: 'Public Relations', image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=400', isLead: true },
+  { id: 'pr2', name: 'Laura Croft', role: 'Member', domain: 'Public Relations', image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=400' },
+  { id: 'pr3', name: 'Mike Ross', role: 'Member', domain: 'Public Relations', image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=400' },
+
+  // Content Writers
+  { id: 'cw1', name: 'Nina Simone', role: 'Lead', domain: 'Content Writing', image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=400', isLead: true },
+  { id: 'cw2', name: 'Oscar Wilde', role: 'Co-Lead', domain: 'Content Writing', image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=400' },
+  { id: 'cw3', name: 'Pam Beesly', role: 'Member', domain: 'Content Writing', image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=400' },
+
+  // Event Coordinators
+  { id: 'ec1', name: 'Quentin T.', role: 'Lead', domain: 'Event Management', image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=400', isLead: true },
+  { id: 'ec2', name: 'Rachel Green', role: 'Co-Lead', domain: 'Event Management', image: 'https://images.unsplash.com/photo-1598550874175-4d7112ee7f43?auto=format&fit=crop&q=80&w=400' },
+  { id: 'ec3', name: 'Steve Jobs', role: 'Member', domain: 'Event Management', image: 'https://images.unsplash.com/photo-1519345182560-3f2917c472ef?auto=format&fit=crop&q=80&w=400' },
+
+  // Media Team
+  { id: 'mt1', name: 'Tom Holland', role: 'Lead', domain: 'Media', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400', isLead: true },
+  { id: 'mt2', name: 'Ursula K.', role: 'Co-Lead', domain: 'Media', image: 'https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&q=80&w=400' },
+  { id: 'mt3', name: 'Victor H.', role: 'Member', domain: 'Media', image: 'https://images.unsplash.com/photo-1504257432389-52343af06ae3?auto=format&fit=crop&q=80&w=400' },
+
+  // Technical Team
+  { id: 'tt1', name: 'Will Smith', role: 'Lead', domain: 'Technical', image: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&q=80&w=400', isLead: true },
+  { id: 'tt2', name: 'Xena W.', role: 'Co-Lead', domain: 'Technical', image: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=400' },
+  { id: 'tt3', name: 'Yara S.', role: 'Member', domain: 'Technical', image: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&q=80&w=400' },
 ];
 
 export const GALLERY_ITEMS: GalleryItem[] = [

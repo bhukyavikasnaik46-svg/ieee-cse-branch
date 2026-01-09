@@ -1,13 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Moon, Sun } from 'lucide-react';
 import { ASSETS } from '../data';
-import { useTheme } from '../context/ThemeContext';
 
 const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
-  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -75,15 +72,7 @@ const Navbar: React.FC = () => {
 
       {/* Right: Actions */}
       <div className="flex items-center gap-3 shrink-0">
-          <button 
-              onClick={toggleTheme}
-              className="text-gray-400 hover:text-white transition-colors p-2 hover:bg-white/5 rounded-full"
-              aria-label="Toggle Theme"
-          >
-              {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
-          </button>
-
-          <Link to="#" className="hidden sm:flex px-4 md:px-6 py-2 md:py-2.5 rounded-full bg-[#050505] border border-gray-800 hover:border-[#E6007E] hover:bg-[#E6007E]/5 transition-all shadow-md items-center justify-center group whitespace-nowrap">
+          <Link to="#" className="hidden sm:flex px-4 md:px-6 py-2 md:py-2.5 rounded-full bg-[#050505] border border-gray-800 hover:border-[#E6007E] hover:bg-[#E6007E]/5 transition-all hover:shadow-[0_0_20px_rgba(230,0,126,0.3)] items-center justify-center group whitespace-nowrap">
               <span className="text-[#E6007E] font-serif font-bold text-xs md:text-sm tracking-[0.15em] group-hover:text-[#ff7cbd] transition-colors">WIE KARE</span>
           </Link>
       </div>

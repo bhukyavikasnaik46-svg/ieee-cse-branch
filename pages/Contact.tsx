@@ -39,6 +39,7 @@ const Contact: React.FC = () => {
 
              {/* Social Icons */}
              <div className="relative z-10 mt-12 hidden lg:block">
+                 <p className="text-gray-400 text-xs font-bold uppercase tracking-widest mb-4">Follow us on</p>
                  <div className="flex gap-4">
                      {[
                          { icon: <Facebook size={20} />, href: "#" },
@@ -168,21 +169,24 @@ const Contact: React.FC = () => {
                 </form>
 
                 {/* Mobile Social Icons */}
-                <div className="mt-8 flex justify-center gap-4 lg:hidden">
-                     {[
-                         { icon: <Facebook size={18} />, href: "#" },
-                         { icon: <Twitter size={18} />, href: "#" },
-                         { icon: <Linkedin size={18} />, href: "#" },
-                         { icon: <Instagram size={18} />, href: "#" }
-                     ].map((item, idx) => (
-                         <a 
-                            key={idx} 
-                            href={item.href}
-                            className="w-8 h-8 rounded-full bg-[#FFB347] text-white flex items-center justify-center hover:bg-[#1F2937] transition-colors shadow-md"
-                         >
-                             {item.icon}
-                         </a>
-                     ))}
+                <div className="mt-8 lg:hidden">
+                     <p className="text-center text-gray-500 text-xs font-bold uppercase tracking-widest mb-4">Follow us on</p>
+                     <div className="flex justify-center gap-4">
+                        {[
+                            { icon: <Facebook size={18} />, href: "#" },
+                            { icon: <Twitter size={18} />, href: "#" },
+                            { icon: <Linkedin size={18} />, href: "#" },
+                            { icon: <Instagram size={18} />, href: "#" }
+                        ].map((item, idx) => (
+                            <a 
+                                key={idx} 
+                                href={item.href}
+                                className="w-8 h-8 rounded-full bg-[#FFB347] text-white flex items-center justify-center hover:bg-[#1F2937] transition-colors shadow-md"
+                            >
+                                {item.icon}
+                            </a>
+                        ))}
+                     </div>
                  </div>
             </div>
         </div>
