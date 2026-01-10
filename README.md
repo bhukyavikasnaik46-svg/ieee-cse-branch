@@ -1,20 +1,56 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
-
-# Run and deploy your AI Studio app
-
-This contains everything you need to run your app locally.
-
-View your app in AI Studio: https://ai.studio/apps/drive/1EBvQg9Me1ADooIqXb-Rbw4w5v_Sk0oqj
-
-## Run Locally
-
-**Prerequisites:**  Node.js
 
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+# IEEE Computer Society Student Branch
+
+Official website of the IEEE Computer Society Student Branch. This platform showcases our events, team, achievements, and gallery, serving as a hub for our community of innovators.
+
+## 🚀 Getting Started
+
+Follow these instructions to get the project up and running on your local machine.
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (Version 16 or higher recommended)
+- [npm](https://www.npmjs.com/) (usually comes with Node.js)
+
+### 🛠️ Installation & Setup
+
+1. **Clone the repository** (if you haven't already):
+   ```bash
+   git clone <repository-url>
+   cd ieee-cse-branch
+   ```
+
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+
+3. **Run the Development Server**:
+   ```bash
+   npm run dev
+   ```
+   - The application will be available at `http://localhost:3000`.
+
+### 🏗️ Build for Production
+
+To create a production build:
+
+```bash
+npm run build
+```
+
+To preview the production build:
+
+```bash
+npm run preview
+```
+
+## 📂 Project Structure
+
+- `/components` - Reusable UI components (Navbar, Footer, Layout)
+- `/pages` - Main page components (Home, Events, Team, etc.)
+- `/context` - Global state management (ThemeContext)
+- `App.tsx` - Main application component and routing
+- `index.html` - Entry point
+
