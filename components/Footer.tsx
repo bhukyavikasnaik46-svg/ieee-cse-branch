@@ -1,7 +1,7 @@
+
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Github, Linkedin, Mail, Instagram } from 'lucide-react';
 import { ASSETS } from '../data';
+import { Github, Linkedin, Mail, Instagram } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -12,10 +12,14 @@ const Footer: React.FC = () => {
           {/* Left: Brand */}
           <div className="flex flex-col items-center md:items-start space-y-6">
             <div className="bg-white p-3 rounded-xl inline-block shadow-lg">
-               <img src={ASSETS.IEEE_CS_LOGO} alt="IEEE CS Logo" className="h-10 w-auto" />
+               <img 
+                 src={ASSETS.WIE_LOGO} 
+                 alt="IEEE WIE" 
+                 className="h-16 w-auto" 
+               />
             </div>
             <p className="text-sm italic text-gray-400">
-              "Empowering the future of Computing"
+              "Empowering Women, Inspiring Innovation"
             </p>
             <div className="text-sm font-semibold text-white">
               Kalasalingam Academy of Research and Education
@@ -26,9 +30,9 @@ const Footer: React.FC = () => {
           <div className="flex flex-col items-center">
             <h3 className="font-bold text-lg text-white mb-6 uppercase tracking-widest">Explore Our Club</h3>
             <ul className="space-y-4 text-sm">
-              <li><a href="#" className="hover:text-[#FFC83C] transition-colors">IEEE Global</a></li>
-              <li><a href="#" className="hover:text-[#FFC83C] transition-colors">IEEE India</a></li>
-              <li><a href="#" className="hover:text-[#FFC83C] transition-colors">IEEE Kalasalingam</a></li>
+              <li><a href="#" className="hover:text-[#B5224E] transition-colors">IEEE Global</a></li>
+              <li><a href="#" className="hover:text-[#B5224E] transition-colors">IEEE India</a></li>
+              <li><a href="https://wie.ieee.org/" target="_blank" rel="noreferrer" className="hover:text-[#B5224E] transition-colors">IEEE WIE Global</a></li>
             </ul>
           </div>
 
@@ -37,7 +41,7 @@ const Footer: React.FC = () => {
             <h3 className="font-bold text-lg text-white mb-6 uppercase tracking-widest">Contact</h3>
             <div className="space-y-2 text-sm text-right">
               <p>Open for collaborations and project ideas.</p>
-              <a href="#" className="text-[#FFB347] hover:underline">Reach out to us.</a>
+              <a href="#" className="hover:underline text-[#B5224E]">Reach out to us.</a>
               <div className="pt-4 text-gray-400">
                 <p>Kalasalingam Academy of</p>
                 <p>Research and Education</p>
@@ -46,16 +50,16 @@ const Footer: React.FC = () => {
             </div>
             
             <div className="flex space-x-4 mt-8">
-              <a href="#" className="text-white hover:text-[#FFC83C] transition-colors"><Instagram size={20} /></a>
-              <a href="#" className="text-white hover:text-[#FFC83C] transition-colors"><Linkedin size={20} /></a>
-              <a href="#" className="text-white hover:text-[#FFC83C] transition-colors"><Github size={20} /></a>
-              <a href="#" className="text-white hover:text-[#FFC83C] transition-colors"><Mail size={20} /></a>
+              <a href="#" className="text-white hover:text-[#B5224E] transition-colors"><Instagram size={20} /></a>
+              <a href="#" className="text-white hover:text-[#B5224E] transition-colors"><Linkedin size={20} /></a>
+              <a href="#" className="text-white hover:text-[#B5224E] transition-colors"><Github size={20} /></a>
+              <a href="#" className="text-white hover:text-[#B5224E] transition-colors"><Mail size={20} /></a>
             </div>
           </div>
         </div>
         
         <div className="mt-16 pt-8 border-t border-gray-900 text-center text-xs text-gray-600">
-           &copy; Copyright 2025 IEEE - all rights reserved. Use of this website signifies your agreement to the IEEE Terms and Conditions.
+           &copy; Copyright 2025 IEEE WIE - all rights reserved. Use of this website signifies your agreement to the IEEE Terms and Conditions.
            <br/> A public charity, IEEE is the world's largest technical professional organization dedicated to advancing technology for the benefit of humanity.
         </div>
       </div>

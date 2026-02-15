@@ -16,7 +16,7 @@ export interface Event {
 export interface Achievement {
   id: string;
   title: string;
-  level: 'International' | 'National' | 'University';
+  level: 'International' | 'National' | 'University' | 'Regional';
   date: string;
   winners: string;
   description: string;

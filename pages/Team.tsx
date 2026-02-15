@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { TEAM_MEMBERS } from '../data';
 import { TeamMember } from '../types';
@@ -17,71 +18,57 @@ const Team: React.FC = () => {
   ];
 
   const MemberCard = ({ member }: { member: TeamMember }) => (
-    <div className="group relative w-full aspect-[3/4] rounded-[24px] overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.1)] cursor-pointer">
+    <div className="group relative w-full aspect-[3/4] rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 cursor-default bg-gray-100">
       {/* Background Image */}
       <img 
         src={member.image} 
         alt={member.name} 
-        className="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
+        className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
         loading="lazy"
         decoding="async"
       />
       
-      {/* Overlay - Always visible bottom gradient with glassmorphism feel */}
-      <div className="absolute inset-x-0 bottom-0 pt-16 pb-6 px-5 bg-gradient-to-t from-black/90 via-black/60 to-transparent flex flex-col justify-end">
-         
-         <div className="flex items-end justify-between w-full">
-             <div className="flex flex-col">
-                 <h3 className="text-white font-bold text-lg md:text-xl leading-tight mb-1 drop-shadow-md">
-                     {member.name}
-                 </h3>
-                 <p className="text-gray-300 text-[10px] md:text-xs font-semibold uppercase tracking-widest drop-shadow-sm">
-                     {member.role}
-                 </p>
-             </div>
-             
-             {/* Pill Button */}
-             <div className="bg-white/90 backdrop-blur-sm text-black text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider hover:bg-[#FFB347] transition-colors shadow-lg transform group-hover:scale-105">
-                 Details
-             </div>
-         </div>
+      {/* Gradient Overlay - Darker at bottom for text readability */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300"></div>
 
+      {/* Text Content */}
+      <div className="absolute bottom-0 left-0 w-full p-4 flex flex-col justify-end items-center text-center transform transition-transform duration-300 translate-y-2 group-hover:translate-y-0">
+         <h3 className="text-white font-bold text-lg leading-tight mb-1 drop-shadow-md tracking-wide">
+             {member.name}
+         </h3>
+         {/* Underline accent */}
+         <div className="h-0.5 w-10 bg-[#FFB347] my-2 rounded-full opacity-80 group-hover:w-16 transition-all duration-300"></div>
+         <p className="text-gray-300 text-[10px] font-bold uppercase tracking-widest drop-shadow-sm mb-2">
+             {member.role}
+         </p>
       </div>
     </div>
   );
 
   return (
-    <div className="pt-24 pb-20 min-h-screen bg-white">
+    <div className="pt-28 pb-20 min-h-screen bg-white">
       <div className="max-w-7xl mx-auto px-4">
         
-        {/* Page Header */}
-        <div className="text-center mb-16 md:mb-24 animate-in fade-in slide-in-from-bottom-4 duration-1000">
-            <h1 className="text-3xl md:text-5xl font-black mb-6 text-black tracking-tight leading-tight">
-                Meet the Minds Behind the Magic
-            </h1>
-            <p className="text-gray-500 max-w-2xl mx-auto text-base md:text-lg px-4 leading-relaxed">
-                A diverse team of creators, coders, designers, and innovators working together to bring ideas to life
-            </p>
-        </div>
-
         {/* Sections */}
-        <div className="space-y-20 md:space-y-28">
+        <div className="space-y-16">
           {sections.map((section) => {
              const members = TEAM_MEMBERS.filter(section.filter);
              if (members.length === 0) return null;
 
              return (
-               <div key={section.title} className="flex flex-col items-center">
-                  {/* Section Title */}
-                  <h2 className="text-xl md:text-2xl font-bold mb-10 md:mb-12 text-center text-[#1F2937] uppercase tracking-wide relative inline-block">
-                    {section.title}
-                    <span className="absolute -bottom-2 left-0 w-full h-1 bg-[#E6007E] rounded-full transform scale-x-75 origin-center"></span>
-                  </h2>
+               <div key={section.title} className="flex flex-col items-center w-full">
+                  {/* Section Title with Underline */}
+                  <div className="mb-10 text-center relative">
+                      <h2 className="text-xl md:text-2xl font-bold text-[#1F2937] uppercase tracking-wide">
+                        {section.title}
+                      </h2>
+                      <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-[#FFB347] rounded-full"></div>
+                  </div>
                   
-                  {/* Grid */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8 w-full max-w-6xl px-4 justify-items-center">
+                  {/* Responsive Grid */}
+                  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8 w-full max-w-6xl px-2 sm:px-4 justify-items-center">
                     {members.map(member => (
-                       <div key={member.id} className="w-full max-w-[280px]">
+                       <div key={member.id} className="w-full max-w-[260px]">
                           <MemberCard member={member} />
                        </div>
                     ))}
